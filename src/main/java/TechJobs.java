@@ -120,15 +120,19 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        // Me: iterate first over ArrayList somejobs with a for each loop, then iterate over each item in somejobs
-        // with the .map method; and print the results in the screen
-        for (HashMap<String, String> job : someJobs){
-            System.out.println("*****");
-            for (Map.Entry<String, String> entry : job.entrySet()){
-                System.out.println(entry.getKey() + ": " + entry.getValue());
+        // Add conditional for user input validation
+        if (!someJobs.contains(someJobs)){
+            System.out.println("No results");
+        }
 
-            }
-            System.out.println("*****" + "\n");
+        // Add iterations over ArrayList someJobs with a for each loop + iteration over each item in someJobs
+        // with the .map.entry method; and print the results in the screen
+        for (HashMap<String, String> job : someJobs){
+               System.out.println("*****");
+               for (Map.Entry<String, String> entry : job.entrySet()){
+                   System.out.println(entry.getKey() + ": " + entry.getValue());
+               }
+               System.out.println("*****" + "\n");
         }
 
         //System.out.println("printJobs is not implemented yet");
