@@ -72,7 +72,8 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            // Task 3: added toLowerCase
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
@@ -99,10 +100,11 @@ public class JobData {
         for (HashMap<String, String> row : allJobs) {
 
             //Loop through each Hashmap in allJobs to get the values and compare them with the searchTerm = value
+            //Added .toLowerCase in if Statement
             for (Map.Entry<String, String> entry : row.entrySet()) {
                 String aValue = entry.getValue();
 
-                if (aValue.contains(value)) {
+                if (aValue.toLowerCase().contains(value.toLowerCase())) {
                     jobsByValue.add(row);
                 }
             }
