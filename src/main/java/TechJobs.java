@@ -121,22 +121,22 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
         // Add conditional for user input validation
-        //if (!someJobs.contains(someJobs)) {
-          //  System.out.println("No results");
-        //}
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        }
 
-        // Add iterations over ArrayList someJobs with a for each loop + iteration over each item in someJobs
+        // Me: Add iterations over ArrayList someJobs with a for each loop + iteration over each item in someJobs
         // with the .map.entry method; and print the results in the screen
 
         for (HashMap<String, String> job : someJobs) {
 
-            System.out.println("*****");
+                System.out.println("\n*****");
 
-            for (Map.Entry<String, String> entry : job.entrySet()) {
-                System.out.println(entry.getKey() + ": " + entry.getValue());
-            }
+                for (Map.Entry<String, String> entry : job.entrySet()) {
+                    System.out.println(entry.getKey() + ": " + entry.getValue());
+                }
 
-            System.out.println("*****" + "\n");
+                System.out.println("*****");
 
         }
     }
